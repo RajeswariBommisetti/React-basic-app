@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Bar, Line, Radar } from "react-chartjs-2";
+import { Bar, Line, Doughnut } from "react-chartjs-2";
 import { Link } from 'react-router-dom';
 
 
@@ -43,7 +43,7 @@ export default class Chart extends Component {
           }}
         />
        {/* Showing Radar graph with static data using react chart js 2 */}
-        <Radar
+        <Doughnut
           data={{
             labels: [
               "January",

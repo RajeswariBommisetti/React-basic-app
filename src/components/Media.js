@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 export default class Media extends Component {
     constructor(props) {
@@ -23,6 +24,7 @@ export default class Media extends Component {
     onImageChange = (event) => {
         let that = this
         if (event.target.files && event.target.files[0]) {
+          toast.success("images uploaded successfully.")
           let filesAmount = event.target.files.length;
           for (var i = 0; i < filesAmount; i++) {
             let reader = new FileReader();
@@ -43,7 +45,7 @@ export default class Media extends Component {
                 <Link className='link-page' to={`/Charts`}>
                     <span className="value">Charts</span>
                 </Link>
-                <input type="file" onChange={this.onImageChange} className="filetype" id="group_image" multiple/>
+                <input type="file" onChange={this.onImageChange} className="filetype" id="group_image" accept="image/x-png,image/jpeg" multiple/>
                 <span className="small_font to_middle">+ Add image</span>
                 {this.state.images.map((image, i) => {    
            return (<div>
