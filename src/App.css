@@ -30,3 +30,41 @@
     transform: rotate(360deg);
   }
 }
+
+#imagePreview {
+  width: 180px;
+  height: 180px;
+  background-position: center center;
+  background-size: cover;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3);
+  display: inline-block;
+}
+
+.image {
+  width: 600px;
+  height: 600px;
+}
+
+.dialog {
+  box-shadow: 0 8px 6px -6px black;
+  position: static;
+  left: 20%;
+  top: 10%;
+}
+
+.img {
+  padding: 10px
+}
+
+.canvas {
+  position: static;
+  display: inline-block;
+  height: 415px;
+  width: 100%;
+}
+
+.link-page {
+  display: block;
+  text-align: right;
+  margin-right: 30px;
+}
